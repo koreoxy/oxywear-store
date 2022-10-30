@@ -7,7 +7,10 @@ export default function Navbar() {
         href={'/'}
         className="flex justify-center items-center flex-col transform transition duration-500 hover:scale-110"
       >
-        <img src="./image/logo.png" className="mr-3 h-12 items-center" />
+        <img
+          src="https://res.cloudinary.com/drcgvx1db/image/upload/v1667119504/image/logo_rxcaz2.png"
+          className="mr-3 h-12 items-center"
+        />
       </Link>
     </nav>
   );

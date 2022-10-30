@@ -43,7 +43,9 @@ export default function CheckoutPage() {
 
   return (
     <Layout>
-      {!productsInfos.length && <div>no products in your shopping cart</div>}
+      {!productsInfos.length && (
+        <div className="">no products in your shopping cart</div>
+      )}
       {productsInfos.length &&
         productsInfos.map((productInfo) => {
           const amount = selectedProducts.filter(
@@ -61,7 +63,7 @@ export default function CheckoutPage() {
                   {productInfo.description}
                 </p>
                 <div className="flex">
-                  <div className="grow">Rp.{productInfo.price}</div>
+                  <div className="grow">${productInfo.price}</div>
                   <div>
                     <button
                       onClick={() => lessOfThisProduct(productInfo._id)}
@@ -126,15 +128,15 @@ export default function CheckoutPage() {
         <div className="mt-4">
           <div className="flex my-3">
             <h3 className="grow font-bold text-gray-400">Subtotal:</h3>
-            <h3 className="font-bold">Rp.{subtotal}</h3>
+            <h3 className="font-bold">${subtotal}</h3>
           </div>
           <div className="flex my-3">
             <h3 className="grow font-bold text-gray-400">Delivery:</h3>
-            <h3 className="font-bold">Rp.{deliveryPrice}</h3>
+            <h3 className="font-bold">${deliveryPrice}</h3>
           </div>
           <div className="flex my-3 border-t-2 pt-3 border-dashed border-emerald-500">
             <h3 className="grow font-bold text-gray-400">Total:</h3>
-            <h3 className="font-bold">Rp.{total}</h3>
+            <h3 className="font-bold">${total}</h3>
           </div>
         </div>
 
@@ -147,7 +149,7 @@ export default function CheckoutPage() {
           type="submit"
           className="bg-emerald-500 px-5 py-2 rounded-xl font-bold text-white w-full my-4 shadow-emerald-300 shadow-lg"
         >
-          Bayar Rp.{total}
+          Bayar ${total}
         </button>
       </form>
     </Layout>

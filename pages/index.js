@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 import Product from '../components/Product';
 import { initMongoose } from '../lib/mongoose';
@@ -14,23 +13,28 @@ export default function Home({ products }) {
     products = products.filter((p) => p.name.toLowerCase().includes(phrase));
   }
   return (
-    <Layout>
-      <input
-        value={phrase}
-        onChange={(e) => setPhrase(e.target.value)}
-        type="text"
-        placeholder="Search for products..."
-        className="bg-gray-100 w-full py-2 px-4 rounded-xl"
-      />
+    <Layout title="Home Page">
+      <div className="flex pb-10">
+        <div className="grow drop-shadow-md">
+          <input
+            value={phrase}
+            onChange={(e) => setPhrase(e.target.value)}
+            type="text"
+            placeholder="Search for products..."
+            className="bg-gray-100 w-full py-2 px-4 rounded-xl"
+          />
+        </div>
+      </div>
+
       <div>
         {categoriesNames.map((categoryName) => (
           <div key={categoryName}>
             {products.find((p) => p.category === categoryName) && (
-              <div>
-                <h2 className="text-2xl py-5 font-bold capitalize">
+              <div className="pt-10">
+                <h1 className="text-1xl py-1 font-bold capitalize text-center bg-gray-200 rounded-t-lg w-32 ring ring-emerald-500 ring-offset-4">
                   {categoryName}
-                </h2>
-                <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide">
+                </h1>
+                <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide bg-gray-200 py-5 rounded-md drop-shadow-xl">
                   {products
                     .filter((p) => p.category === categoryName)
                     .map((productInfo) => (

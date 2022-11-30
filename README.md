@@ -1,8 +1,9 @@
 # Introduction
 ## OxyWear Store - ecommerce simple
 OxyWear Store adalah E-commerce simple yang dibuat menggunakan Framework Next.js dan Tailwindcss
-live demo :
-https://simple-ecommerce-nextjs.vercel.app/
+
+### live demo :
+https://oxywear-store.vercel.app/
 
 
 ## Home Page

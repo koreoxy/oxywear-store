@@ -2,12 +2,19 @@ import { useContext } from 'react';
 import { ProductsContext } from './ProductsContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import * as gtag from '../lib/gtag';
 
 export default function Product({ _id, name, price, description, picture }) {
   const { setSelectedProducts } = useContext(ProductsContext);
   function addProduct() {
     setSelectedProducts((prev) => [...prev, _id]);
     toast('Produk telah ditambahkan di cart');
+    gtag.event({
+      action: 'tambahkan_ke_keranjang',
+      category: 'ecommerce',
+      label: 'item added',
+      value: 'add to cart',
+    });
   }
 
   return (

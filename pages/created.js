@@ -9,11 +9,7 @@ export default function created() {
         <div className="h-1 bg-emerald-700 rounded"></div>
         <div className="flex space-x-4 pt-1">
           <div className="h-10 w-10">
-            <img
-              className="rounded-full"
-              src="https://res.cloudinary.com/drcgvx1db/image/upload/v1669735570/image/avatar_rruinh.jpg"
-              alt=""
-            />
+            <img className="rounded-full" src="../Image/avatar.jpg" alt="" />
           </div>
           <div className="flex-1">
             <div className="text-sm">Name : Saifullah</div>
@@ -41,7 +37,7 @@ export default function created() {
             <div className="border border-emerald-300 shadow rounded-md p-4">
               <img
                 className="transform transition duration-500 hover:scale-110"
-                src="https://res.cloudinary.com/drcgvx1db/image/upload/v1669806348/image/sistempakar_xu4csg.png"
+                src="../Image/sistempakar.png"
                 alt=""
               />
             </div>
@@ -56,7 +52,7 @@ export default function created() {
             <div className="border border-emerald-300 shadow rounded-md p-4">
               <img
                 className="transform transition duration-500 hover:scale-110"
-                src="https://res.cloudinary.com/drcgvx1db/image/upload/v1669806355/image/bukulist_vraeo8.png"
+                src="../Image/bukulist.png"
                 alt=""
               />
             </div>

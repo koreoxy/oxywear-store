@@ -16,15 +16,17 @@ export default function Home({ products }) {
   }
   return (
     <Layout title="Home Page">
-      <ul class="text-center list-none">
-        <li className="text-3xl font-bold">
-          <a className="text-emerald-600">Oxywear</a> Store
-        </li>
-        <li className="text-xl font-bold">StreetWear Clothes Collection</li>
-        <li className="text-sm">
-          High Quality Clothes for you Go to login or daftar and buy it
-        </li>
-      </ul>
+      <div>
+        <ul class="text-center list-none">
+          <li className="text-3xl font-bold">
+            <a className="text-emerald-600">Oxywear</a> Store
+          </li>
+          <li className="text-xl font-bold">StreetWear Clothes Collection</li>
+          <li className="text-sm">
+            High Quality Clothes for you Go to login or daftar and buy it
+          </li>
+        </ul>
+      </div>
 
       <div id="swiper-header" className="m-5">
         <HeaderSwiper />

@@ -4,6 +4,7 @@ import Product from '../components/Product';
 import { initMongoose } from '../lib/mongoose';
 import { findAllProducts } from './api/products';
 import HeaderSwiper from '../components/HeaderSwiper/Swiper';
+import CardCategory from '../components/CardCategory';
 
 export default function Home({ products }) {
   const [phrase, setPhrase] = useState('');
@@ -25,11 +26,13 @@ export default function Home({ products }) {
         </li>
       </ul>
 
-      <div className="m-5">
+      <div id="swiper-header" className="m-5">
         <HeaderSwiper />
       </div>
 
-      <div className="flex pb-10">
+      <CardCategory />
+
+      <div id="search-bar" className="flex pb-10">
         <div className="grow drop-shadow-md">
           <input
             value={phrase}
@@ -41,7 +44,12 @@ export default function Home({ products }) {
         </div>
       </div>
 
-      <div className="">ssa</div>
+      <div id="text-trending-products" className="text-center">
+        <h1 className="font-bold text-[20px]">Trending Products</h1>
+        <h2 className="text-gray-500">
+          Check trending product yang ada di OxyWear Store
+        </h2>
+      </div>
 
       <div>
         {categoriesNames.map((categoryName) => (

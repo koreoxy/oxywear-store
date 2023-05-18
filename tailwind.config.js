@@ -11,5 +11,12 @@ module.exports = {
       heading: ['Poppins'],
     },
   },
-  plugins: [require('tailwind-scrollbar-hide'), require('flowbite/plugin')],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('flowbite/plugin'),
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ['light'],
+  },
 };

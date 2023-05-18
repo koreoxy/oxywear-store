@@ -1,13 +1,17 @@
 import Head from 'next/head';
 import { useContext, useEffect, useState } from 'react';
 import Footer from './Footer';
+import FooterDesktop from '../components/FooterDesktop/index';
 import Navbar from './Navbar';
 import { ProductsContext } from './ProductsContext';
 import { ToastContainer } from 'react-toastify';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Layout({ title, children }) {
   const { setSelectedProducts } = useContext(ProductsContext);
   const [success, setSuccess] = useState(false);
+  const isMedium = useMediaQuery({ query: '(max-width:850px)' });
+  const isMobile = useMediaQuery({ query: '(max-width:550px)' });
   useEffect(() => {
     if (window.location.href.includes('success')) {
       setSelectedProducts([]);
@@ -33,7 +37,7 @@ export default function Layout({ title, children }) {
       </div>
       ;
       <ToastContainer />
-      <Footer />
+      {!isMedium && <FooterDesktop />} {isMobile && <Footer />}
     </div>
   );
 }

@@ -3,6 +3,8 @@ import Layout from '../components/Layout';
 import Product from '../components/Product';
 import { initMongoose } from '../lib/mongoose';
 import { findAllProducts } from './api/products';
+import Carousel from '../components/carousel';
+import HeaderSwiper from '../components/HeaderSwiper/Swiper';
 
 export default function Home({ products }) {
   const [phrase, setPhrase] = useState('');
@@ -14,6 +16,22 @@ export default function Home({ products }) {
   }
   return (
     <Layout title="Home Page">
+      <ul class="text-center list-none">
+        <li className="text-3xl font-bold">
+          <a className="text-emerald-600">Oxywear</a> Store
+        </li>
+        <li className="text-xl font-bold">StreetWear Clothes Collection</li>
+        <li className="text-sm">
+          High Quality Clothes for you Go to login or daftar and buy it
+        </li>
+      </ul>
+
+      <div className="m-5">
+        {/* <img className="" src="../Image/slide.jpg" alt="" /> */}
+        {/* <Carousel /> */}
+        <HeaderSwiper />
+      </div>
+
       <div className="flex pb-10">
         <div className="grow drop-shadow-md">
           <input
@@ -25,6 +43,8 @@ export default function Home({ products }) {
           />
         </div>
       </div>
+
+      <div className="">ssa</div>
 
       <div>
         {categoriesNames.map((categoryName) => (

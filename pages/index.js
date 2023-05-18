@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 import Product from '../components/Product';
 import { initMongoose } from '../lib/mongoose';
 import { findAllProducts } from './api/products';
-import Carousel from '../components/carousel';
 import HeaderSwiper from '../components/HeaderSwiper/Swiper';
 
 export default function Home({ products }) {
@@ -27,8 +26,6 @@ export default function Home({ products }) {
       </ul>
 
       <div className="m-5">
-        {/* <img className="" src="../Image/slide.jpg" alt="" /> */}
-        {/* <Carousel /> */}
         <HeaderSwiper />
       </div>
 

@@ -21,6 +21,7 @@ export default function App() {
         className={styles.mainSwiper}
       >
         {[...Array(10).keys()].map((i) => (
+          // eslint-disable-next-line react/jsx-key
           <SwiperSlide className={styles.mainSwiper__slide}>
             <img src={`../../../Image/swiper/${i + 1}.jpg`} alt="" />
           </SwiperSlide>

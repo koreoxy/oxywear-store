@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import { IoLocationSharp } from 'react-icons/io5';

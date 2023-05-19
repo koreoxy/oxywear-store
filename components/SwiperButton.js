@@ -4,7 +4,7 @@ export const SwiperButton = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="flex justify-center">
+    <div className="max-sm:hidden flex justify-center">
       <div className="px-10 pt-2">
         <button
           className="bg-green-600 rounded-md px-5 mr-5"

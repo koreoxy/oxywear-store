@@ -5,6 +5,7 @@ import { initMongoose } from '../lib/mongoose';
 import { findAllProducts } from './api/products';
 import HeaderSwiper from '../components/HeaderSwiper/Swiper';
 import CardCategory from '../components/CardCategory';
+import Link from 'next/link';
 
 export default function Home({ products }) {
   const [phrase, setPhrase] = useState('');
@@ -22,8 +23,22 @@ export default function Home({ products }) {
             <a className="text-emerald-600">Oxywear</a> Store
           </li>
           <li className="text-xl font-bold">StreetWear Clothes Collection</li>
-          <li className="text-sm">
-            High Quality Clothes for you Go to login or daftar and buy it
+          <li className="text-md pt-5 font-semibold">
+            High Quality Clothes for you Go to{' '}
+            <Link
+              className="bg-green-600 text-white font-bold text-[15px] rounded-md px-2 py-1 shadow-md hover:bg-green-800"
+              href={'/login'}
+            >
+              Login
+            </Link>{' '}
+            or{' '}
+            <Link
+              className="bg-red-600 text-white font-bold text-[15px] rounded-md px-2 py-1 shadow-md hover:bg-red-800"
+              href={'/daftar'}
+            >
+              Daftar
+            </Link>{' '}
+            and buy it
           </li>
         </ul>
       </div>

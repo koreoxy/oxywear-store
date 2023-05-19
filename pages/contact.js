@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Input from '../components/Input';
+import Input from '../components/Input/Input1';
 import Layout from '../components/Layout';
 
 export default function Contact() {

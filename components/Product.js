@@ -3,6 +3,7 @@ import { ProductsContext } from './ProductsContext';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as gtag from '../lib/gtag';
+import Link from 'next/link';
 
 export default function Product({ _id, name, price, description, picture }) {
   const { setSelectedProducts } = useContext(ProductsContext);
@@ -19,11 +20,11 @@ export default function Product({ _id, name, price, description, picture }) {
 
   return (
     <div className="w-64 bg-gray-100 px-3 py-3 h-full rounded-lg drop-shadow-md">
-      <button onClick={addProduct}>
+      <Link href={'/product-detail'}>
         <div className="bg-emerald-100 shadow-lg shadow-emerald-200/50 p-5 rounded-xl transform transition duration-500 hover:scale-110">
           <img src={picture} alt="" />
         </div>
-      </button>
+      </Link>
 
       <div className="mt-2">
         <h3 className="font-bold text-lg">{name}</h3>

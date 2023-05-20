@@ -73,10 +73,10 @@ export default function Home({ products }) {
           <div key={categoryName}>
             {products.find((p) => p.category === categoryName) && (
               <div className="pt-10">
-                <h1 className="text-1xl py-1 font-bold capitalize text-center bg-gray-200 rounded-t-lg w-32 ring ring-emerald-500 ring-offset-4">
+                <h1 className="text-1xl py-1 font-bold capitalize text-center bg-gray-100 rounded-t-lg w-32 ring ring-emerald-500 ring-offset-4">
                   {categoryName}
                 </h1>
-                <div className="flex -mx-5 overflow-x-scroll snap-x bg-gray-200 py-5 rounded-md drop-shadow-xl">
+                <div className="flex -mx-5 overflow-x-scroll snap-x bg-gray-100 py-5 pb-16 rounded-md drop-shadow-xl">
                   {products
                     .filter((p) => p.category === categoryName)
                     .map((productInfo) => (

@@ -23,7 +23,7 @@ export default function Product({ _id, name, price, description, picture }) {
     <>
       <Link href={'/product-detail'}>
         <div className="w-64 bg-gray-100 px-3 py-3 h-full rounded-lg drop-shadow-md">
-          <div className="bg-emerald-100 shadow-lg shadow-emerald-200/50 p-5 rounded-xl transform transition duration-500 hover:scale-110 max-sm:transform-none max-sm:transition-none">
+          <div className="bg-emerald-100 shadow-lg shadow-emerald-200/50 p-5 rounded-xl transform transition duration-500 hover:scale-110 max-sm:transform-none max-sm:transition-none max-sm:duration-0">
             <img src={picture} alt="" />
           </div>
 

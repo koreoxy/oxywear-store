@@ -8,7 +8,7 @@ export default function Page() {
       <AccountMenu
         title="My Account"
         main={[
-          <div className="w-[608px]">
+          <div className="w-[608px]" key="">
             <h1>
               Hello <b>Admin</b> (not <b>Admin</b>? Log Out)
             </h1>

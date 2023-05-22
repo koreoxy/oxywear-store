@@ -8,7 +8,7 @@ function PaymentMethod() {
       <AccountMenu
         title="Payment Method"
         main={[
-          <div className="bg-gray-300 w-[608px]">
+          <div className="bg-gray-300 w-[608px]" key="">
             <div className="flex flex-col pl-3 pt-2">
               <h1 className="text-md font-bold">Add Payment Method</h1>
               <div className="flex flex-row mx-4">

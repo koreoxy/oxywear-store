@@ -9,7 +9,10 @@ function orders() {
       <AccountMenu
         title="Orders"
         main={[
-          <div className="bg-gray-200 w-[608px] h-[74px] border-t-4 border-black rounded-b-md">
+          <div
+            className="bg-gray-200 w-[608px] h-[74px] border-t-4 border-black rounded-b-md"
+            key=""
+          >
             <div className="flex flex-row pt-2 px-5">
               <div className="text-lg grow">No order has been made yet.</div>
               <Link

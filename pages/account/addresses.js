@@ -9,7 +9,7 @@ function addresses() {
       <AccountMenu
         title="Addresses"
         main={[
-          <div className="w-[608px]">
+          <div className="w-[608px]" key="">
             <h1 className="text-sm">
               The following addresses will be used on the checkout page by
               default.
